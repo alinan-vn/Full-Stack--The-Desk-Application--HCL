@@ -4,8 +4,15 @@ import java.util.Scanner;
 
 public class Main {
 
+	static ArrayList<Integer> expenses = new ArrayList<Integer>();
+	
     public static void main(String[] args) {
-        /*System.out.println("Hello World!");*/
+    	expenses.add(1000);
+        expenses.add(2300);
+        expenses.add(45000);
+        expenses.add(32000);
+        expenses.add(110);    	
+    	
         System.out.println("\n**************************************\n");
         System.out.println("\tWelcome to TheDesk \n");
         System.out.println("**************************************");
@@ -13,7 +20,8 @@ public class Main {
 
     }
     private static void optionsSelection() {
-        String[] arr = {"1. I wish to review my expenditure",
+        String[] arr = {
+        		"1. I wish to review my expenditure",
                 "2. I wish to add my expenditure",
                 "3. I wish to delete my expenditure",
                 "4. I wish to sort the expenditures",
@@ -28,11 +36,7 @@ public class Main {
         }
         ArrayList<Integer> arrlist = new ArrayList<Integer>();
         ArrayList<Integer> expenses = new ArrayList<Integer>();
-        expenses.add(1000);
-        expenses.add(2300);
-        expenses.add(45000);
-        expenses.add(32000);
-        expenses.add(110);
+        
         expenses.addAll(arrlist);
         System.out.println("\nEnter your choice:\t");
         Scanner sc = new Scanner(System.in);
