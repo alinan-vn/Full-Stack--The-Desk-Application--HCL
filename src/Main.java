@@ -70,7 +70,9 @@ public class Main {
                 optionsSelection();
                 break;
             case 5:
-//                        searchExpenses(expenses);
+                System.out.println("Enter the expense you need to search:\t");
+                Integer searchExpense = sc.nextInt();
+                searchExpenses(expenses, searchExpense);
                 optionsSelection();
                 break;
             case 6:
@@ -87,8 +89,6 @@ public class Main {
             }
     
     private static void searchExpenses(ArrayList<Integer> arrayList, Integer value) {
-        int leng = arrayList.size();
-        System.out.println("Enter the expense you need to search:\t");
         //Complete the method
         boolean exists = false;
         for(int expense : arrayList) {
@@ -97,11 +97,12 @@ public class Main {
         	}
         }
         if (exists) {
-    		System.out.println("Found expense! " + value);
+    		System.out.println("Found expense! \n" + value + "\n");
     	}else {
-    		System.out.println("Sorry.. This expense does not exist.");
+    		System.out.println("Sorry... This expense does not exist. \n");
     	}
     }
+    
     private static void sortExpenses(ArrayList<Integer> arrayList) {
        //Complete the method. The expenses should be sorted in ascending order.
         Collections.sort(expenses);
